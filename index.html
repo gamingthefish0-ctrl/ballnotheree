@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Iqbal</title>
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #18f9f9, #3ce4dc);
+      color: white;
+      text-align: center;
+      padding: 56px 24px 40px;
+    }
+
+    .avatar-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      border: 4px solid rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      margin: 0 auto 16px;
+    }
+
+    .hero img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 { font-size: 26px; margin-bottom: 6px; }
+    .hero .tagline { font-size: 14px; opacity: 0.9; margin-bottom: 12px; }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    /* ===== SECTION ===== */
+    .section {
+      max-width: 560px;
+      margin: 20px auto;
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .section h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #999;
+      margin-bottom: 14px;
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    /* ===== SKILL ===== */
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #c8e6c9;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* ===== TOMBOL KONTAK ===== */
+    .kontak-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .kontak-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border: 1.5px solid #e5e5e5;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #333;
+      background: white;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kontak-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-color: #bbb;
+    }
+
+    .kontak-btn:active { transform: scale(0.97); box-shadow: none; }
+
+    /* Efek ripple */
+    .kontak-btn .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.08);
+      width: 100px;
+      height: 100px;
+      margin-top: -50px;
+      margin-left: -50px;
+      animation: ripple-anim 0.5s linear;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-anim {
+      from { transform: scale(0); opacity: 1; }
+      to   { transform: scale(4); opacity: 0; }
+    }
+
+    .kontak-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .kontak-info .kontak-nama { font-size: 15px; font-weight: bold; }
+    .kontak-info .kontak-sub { font-size: 12px; color: #999; margin-top: 2px; }
+    .kontak-arrow { margin-left: auto; color: #ccc; font-size: 18px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 28px;
+      font-size: 12px;
+      color: #bbb;
+    }
+
+    /* ===== ANIMASI MASUK ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero                 { animation: fadeUp 0.5s ease both; }
+    .section:nth-child(2) { animation: fadeUp 0.5s ease 0.1s both; }
+    .section:nth-child(3) { animation: fadeUp 0.5s ease 0.2s both; }
+    .section:nth-child(4) { animation: fadeUp 0.5s ease 0.3s both; }
+
+  </style>
+</head>
+<body>
+
+ 
+  <div class="hero">
+    
+    <img src="foto.png" alt="Foto Muhammad Iqbal"> 
+
+    <h1>ballnotheree</h1>
+    <p class="tagline">Proplayer VALO · MOLE JG</p>
+    <span class="badge">📍 bermuda</span>
+  </div>
+
+  
+  <div class="section">
+    <h2>Tentang Saya</h2>
+    <p>
+      hai! aing ibaal, remeaja jompo yang sedang belajar
+      frontend development, aing berusaha dalam membangun tampilan web
+      yang menarik, responsif, dan gampang dipake. Jadilah Orang Yang Bemanfaat
+      Agar Bisa Berguna Dimasyarakat!
+    </p>
+  </div>
+
+  
+  <div class="section">
+    <h2>Keahlian</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Main VALORANT</span>
+      <span class="skill">APALAGI PUBG</span>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <h2>Kontak & Media Sosial</h2>
+    <div class="kontak-list">
+
+      <!-- WhatsApp — ganti nomor di href (format: 62 + nomor tanpa 0 di depan) -->
+      <a href="https://wa.me/6283835726617" class="kontak-btn" target="_blank">
+        <div class="kontak-icon" style="background:#25D366;">💬</div>
+        <div class="kontak-info">
+          <div class="kontak-nama">WhatsApp</div>
+          <div class="kontak-sub">+62 838-3572-6617</div> <!-- ← ganti -->
+        </div>
+        <span class="kontak-arrow">›</span>
+      </a>
+
+      
+      <a href="https://instagram.com/ibaalsilawane" class="kontak-btn" target="_blank">
+        <div class="kontak-icon" style="background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);">📷</div>
+        <div class="kontak-info">
+          <div class="kontak-nama">Instagram</div>
+          <div class="kontak-sub">@ibaalsilawane</div> <!-- ← ganti -->
+        </div>
+        <span class="kontak-arrow">›</span>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:iballsilawanee@gmail.com" class="kontak-btn">
+        <div class="kontak-icon" style="background:#EA4335;">✉️</div>
+        <div class="kontak-info">
+          <div class="kontak-nama">Email</div>
+          <div class="kontak-sub">iballsilawanee@gmail.com</div>
+        </div>
+        <span class="kontak-arrow">›</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 ballnotheree · made with CLAUDE
+  </footer>
+
+  <!-- SCRIPT ANIMASI RIPPLE -->
+  <script>
+    document.querySelectorAll('.kontak-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const old = this.querySelector('.ripple');
+        if (old) old.remove();
+
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        const rect = this.getBoundingClientRect();
+        ripple.style.left = (e.clientX - rect.left) + 'px';
+        ripple.style.top  = (e.clientY - rect.top)  + 'px';
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+  </script>
+
+</body>
+</html>
